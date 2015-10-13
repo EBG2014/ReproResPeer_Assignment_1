@@ -81,7 +81,7 @@ Next we plot the histogram of the total number of steps per day, and also calcul
 
 
 ```r
-hist (d2$x, main="Histogram of total number of steps per day",xlab="total no. of steps",col="blue")
+hist (d2$x, main="Histogram of total number of steps per day",xlab="Total no. of steps",col="blue")
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
@@ -94,7 +94,7 @@ summary(d2$x)
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##      41    8841   10760   10770   13290   21190
 ```
-The median number of steps was **10,760** and the mean number of steps was **10,770** - and as can be seen from both the histomgram and the proximity of the median to he mean, the distribution was realtively symmetric with some left skewness.
+The median number of steps was **10,760** and the mean number of steps was **10,770** - and as can be seen from both the histomgram and the proximity of the median to he mean, the distribution was relatively symmetric with some left skewness.
 
 ##Average Daily Activity Pattern
 
@@ -191,7 +191,7 @@ imputed.data<-imputed.data[order(imputed.data$date,imputed.data$interval),]
 
 dimp1<-aggregate(imputed.data$steps, by=list(imputed.data$date),FUN=sum)
 
-hist (dimp1$x, main="Histogram of total number of steps per day\nWith Imputed Values",xlab="total no. of steps",col="red")
+hist (dimp1$x, main="Histogram of total number of steps per day\nWith Imputed Values",xlab="Total no. of steps",col="red")
 ```
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
